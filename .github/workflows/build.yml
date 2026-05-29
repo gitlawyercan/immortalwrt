@@ -29,10 +29,10 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
-    - name: Load custom config
+    - name: Load config
       run: |
-        cp config/x86_64_n2800.config .config
-        make defconfig
+         cp x86_64_n2800.config .config
+         make defconfig
 
     - name: Download packages
       run: |
